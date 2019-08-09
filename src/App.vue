@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       product: "Socks",
-      image: "./assets/vmSock-green.jpg",
+      image: "./assets/green.jpg",
       inventory: 1
     };
   }
