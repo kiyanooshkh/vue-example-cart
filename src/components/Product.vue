@@ -9,8 +9,15 @@
       <p v-else-if="inventory <= 1 && inventory > 0">Almost sold out</p>
       <p v-else>Out of stock</p>
       <ul>
-        <li v-for="detail in details">{{detail}}</li>
+        <li v-for="detail in details" :key="detail">{{detail}}</li>
       </ul>
+      <ul>
+        <li v-for="variant in variants" :key="variant.variantId">{{variant.variantColor}}</li>
+      </ul>
+      <div>
+        <p>Cart ({{cart}})</p>
+      </div>
+      <button v-on:click="cart+1">Add to cart</button>
     </div>
   </div>
 </template>
@@ -22,7 +29,13 @@ export default {
     product: String,
     image: String,
     inventory: Number,
-    details: Array
+    details: Array,
+    variants: Object
+  },
+  data() {
+    return {
+      cart: 0
+    };
   }
 };
 </script>
