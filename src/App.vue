@@ -6,6 +6,8 @@
       :inventory="inventory"
       :details="details"
       :variants="variants"
+      :cart="cart"
+      :addtoCart="addtoCart"
     />
   </div>
 </template>
@@ -19,6 +21,12 @@ export default {
     Product
   },
 
+  methods: {
+    addtoCart: function() {
+      this.cart += 1;
+    }
+  },
+
   data() {
     return {
       product: "Socks",
@@ -28,7 +36,8 @@ export default {
       variants: [
         { variantId: 2344, variantColor: "blue" },
         { variantId: 2345, variantColor: "Green" }
-      ]
+      ],
+      cart: 0
     };
   }
 };

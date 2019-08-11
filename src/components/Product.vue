@@ -15,9 +15,9 @@
         <li v-for="variant in variants" :key="variant.variantId">{{variant.variantColor}}</li>
       </ul>
       <div>
-        <p>Cart ({{cart}})</p>
+        <p id="cart">Cart ({{cart}})</p>
       </div>
-      <button v-on:click="cart+1">Add to cart</button>
+      <button v-on:click="addtoCart">Add to cart</button>
     </div>
   </div>
 </template>
@@ -30,12 +30,9 @@ export default {
     image: String,
     inventory: Number,
     details: Array,
-    variants: Object
-  },
-  data() {
-    return {
-      cart: 0
-    };
+    variants: Object,
+    cart: Number,
+    addtoCart: Function
   }
 };
 </script>
