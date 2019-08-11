@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Product :product="product" :image="image" :inventory="inventory"/>
+    <Product :product="product" :image="image" :inventory="inventory" :details="details"/>
   </div>
 </template>
 
@@ -16,8 +16,9 @@ export default {
   data() {
     return {
       product: "Socks",
-      image: "./assets/green.jpg",
-      inventory: 1
+      image: "../assets/logo.png",
+      inventory: 1,
+      details: ["80% cotton", "20% polyster", "Gender-neutral"]
     };
   }
 };
