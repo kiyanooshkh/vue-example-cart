@@ -30,7 +30,6 @@ export default {
   data() {
     return {
       product: "Socks",
-      image: "../assets/logo.png",
       inventory: 1,
       details: ["80% cotton", "20% polyster", "Gender-neutral"],
       variants: [
